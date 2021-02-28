@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.scss';
 import Head from 'next/head';
-import { NavBar } from './navbar';
+import { NavBar } from '../layout/navbar';
 import { Footer } from './footer';
 
 type Props = {

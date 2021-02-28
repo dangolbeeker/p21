@@ -27,6 +27,7 @@
     "react-scroll": "^1.8.1",
     "react-test-renderer": "^17.0.1",
     "react-typed": "^1.2.0",
+    "sass": "^1.32.8",
     "typescript-fsa": "^3.0.0",
     "typescript-fsa-reducers": "^1.2.2"
   },

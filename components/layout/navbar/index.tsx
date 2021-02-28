@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './index.module.scss';
 import { Avatar, Divider, Drawer, Hidden, Container, AppBar, Toolbar, IconButton, List, ListItem } from '@material-ui/core';
 import { Menu } from '@material-ui/icons';
-import { AnchorLink } from '../../../components/links/anchorLink';
+import { AnchorLink } from '../../links/anchorLink';
 
 type Props = {
   hideMenu: boolean;
@@ -40,34 +40,14 @@ export const NavBar: React.FC<Props> = (props: Props) => {
             <Link href='/'>
               <a className={styles.titleText}>Scott Beeker</a>
             </Link>
+            <link href='/booking'>
+            </link>
+            <link href='/skills'></link>
+          <link href='/portfolio'>
+          </link>
+          <link href='/resume'></link>
           </div>
-          {!props.hideMenu && (
-            <React.Fragment>
-              <Hidden xsDown>
-                <ul className={styles.menu}>
-                  {menuItems.map(item => (
-                    <li key={item.to} className={styles.menuItem}><AnchorLink to={item.to}>{item.text}</AnchorLink></li>
-                  ))}
-                </ul>
-              </Hidden>
-              <Hidden smUp>
-                <div>
-                  <IconButton onClick={handleClickHamburger}><Menu/></IconButton>
-                </div>
-                <Drawer anchor='right' open={openSideMenu} onClose={handleCloseSideMenu}>
-                  <List className={styles.sideMenu}>
-                    {menuItems.map(item => (
-                      <React.Fragment key={item.to}>
-                        <AnchorLink to={item.to}><ListItem className={`${styles.menuItem} ${styles.sideMenuItem}`} onClick={handleClickSideMenuItem}>{item.text}</ListItem></AnchorLink>
-                        <Divider/>
-                      </React.Fragment>
-                    ))}
-                  </List>
-                </Drawer>
-              </Hidden>
-            </React.Fragment>
-          )}
-        </Toolbar>
+         </Toolbar>
       </Container>
     </AppBar>
   );

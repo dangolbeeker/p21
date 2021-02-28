@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ExternalLink } from './links';
+import { ExternalLink } from '../../links/index';
 import styles from './index.module.scss';
 
 
